@@ -1,4 +1,4 @@
-# OSSU-Journey
+# OSSU Journey
 
 
 |Core Programming|Core systems|Core theory|Core security|Core applications|Core ethics|
