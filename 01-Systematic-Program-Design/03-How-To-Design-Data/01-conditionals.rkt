@@ -27,3 +27,8 @@
   (cond [(> (image-height img) (image-width img)) "tall"]
         [(= (image-height img) (image-width img)) "square"]
         [else "wide"]))
+
+
+(cond [(> 1 2) "bigger"]
+      [(= 1 2) "equal"]
+      [(< 1 2) "smaller"])
