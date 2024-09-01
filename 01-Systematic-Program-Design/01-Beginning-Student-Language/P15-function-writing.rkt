@@ -8,10 +8,12 @@
 ; 
 
 
-(define (bigger x y)
+(check-expect (larger 15 20) 20)
+(check-expect (larger 20 20) 20)
+(check-expect (larger 20 15) 20)
+
+(define (larger x y)
   (if (> x y)
       x
       y))
 
-(bigger 10 5)
-(bigger 5 10)
