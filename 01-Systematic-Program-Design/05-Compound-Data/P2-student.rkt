@@ -13,20 +13,20 @@
 ; 
 
 
-(define-struct student (name grade allergic?))
+(define-struct student (name grade allergies?))
 ;; Student is (make-student String Natural[1,12] Boolean)
 
 (define S1 (make-student "Gokhan" 2 true))
 (define S2 (make-student "Selin" 5 false))
-
 #;
-(define (fn-for-student s)
-  (... (student-name s)        ;String
-       (student-grade s)       ;Natural[1,12]
-       (student-allergic? s))) ;Boolean
+(define (fn-for-student s) 
+  (... (student-name s)          ;String
+       (student-grade s)         ;Natural[1,12]
+       (student-allergies? s)))  ;Boolean
 
-;; Template rules used:
-;; - compound: 3 fields
+;;Template rules used:
+;;   - compound: 3 fields
+
 
 
 ;; =================
@@ -43,19 +43,19 @@
 
 
 ;; Student -> Boolean
-;; produce true if the given student is at or below grade 6 and has allergies
-
+;; produce true if student in grade 6 or below and has not allergy
 (check-expect (add-name? S1) true)
 (check-expect (add-name? S2) false)
 (check-expect (add-name? (make-student "Ali" 10 true)) false)
 (check-expect (add-name? (make-student "Ikra" 11 false)) false)
 
-;(define (add-name? s) true)   ; stub
-; Template from Student
+;(define (add-list? s) false) ;stub
 
-(define (add-name? s)
+;<use template from Student>
+
+(define (add-name? s) 
   (and (<= (student-grade s) 6)
-       (student-allergic? s)))
-  
-         
+       (student-allergies? s)))
+
+
 
