@@ -1,3 +1,4 @@
+;; simple-text-editor-starter.rkt
 
 ;  
 ;  In this problem, you will be designing a simple one-line text editor.
@@ -154,3 +155,8 @@
   (if (string=? s "")
       ""
       (substring s 0 (sub1 (string-length s)))))
+       
+(main (make-editor "" ""))
+
+
+
