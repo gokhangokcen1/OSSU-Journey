@@ -1,34 +1,15 @@
 ;; quidditch-starter.rkt
 
-; 
+;  
 ; PROBLEM:
-; 
+;  
 ; Imagine that you are designing a program that will keep track of
 ; your favorite Quidditch teams. (http://www.internationalquidditch.org/).
 ; 
-; Design a data definition to represent a list of Quidditch teams.
+; (A) Design a data definition to represent a list of Quidditch teams.
+; (B) Design a function that consumes ListOfString and produces true if
+;     the list includes "UBC".
 
-
-; Information:
-; UBC
-; McGill
-; Team Who Must Not Be Named
-; 
-; 
-; 
-; 
-; 
-; 
-; Data:
-; "UBC"
-; "McGill"
-; "Team Who Must Not Be Named"
-; 
-; empty
-; 
-; (cons "UBC"
-;       (cons "McGill"
-;             empty))
 
 
 ;; ListOfString is one of:
@@ -49,3 +30,20 @@
 ;;  - one of: 2 cases
 ;;  - atomic distinct: empty
 ;;  - compound: (cons String ListOfString)
+;;  - self-reference: (rest los) is ListOfString
+
+;; ListOfString -> Boolean
+;; produce true if los includes "UBC"
+(check-expect (contains-ubc? empty) false)
+(check-expect (contains-ubc? (cons "McGill" empty)) false)
+(check-expect (contains-ubc? (cons "UBC" empty)) true)
+(check-expect (contains-ubc? (cons "McGill" (cons "UBC" empty))) false)
+
+;(define (contains-ubc? los) false) ;stub
+
+(define (contains-ubc? los)
+  (cond [(empty? los) false]
+        [else
+         (if (string=? (first-los) "UBC")
+             true
+             (contains-ubc? (rest los)))])) 
