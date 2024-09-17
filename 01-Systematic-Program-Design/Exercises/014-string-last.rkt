@@ -1,4 +1,4 @@
-; Exercise 13. Define the function string-first, which extracts the first
+; Exercise 14. Define the function string-last, which extracts the last
 ; 1String from a non-empty string. 
 
 (define (string-last str)
