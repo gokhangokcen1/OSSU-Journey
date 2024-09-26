@@ -3,9 +3,11 @@ Created test.sml file
 val x = 3 + 4
 val y = x * 5
 ```
-Exit: CTRL + X and CTRL + C 
-Save: CTRL + X and CTRL + S
-SML Command: CTRL + C CTRL + F -> sml
+`Exit:` CTRL + X and CTRL + C 
+
+`Save:` CTRL + X and CTRL + S
+
+`SML Command:` CTRL + C CTRL + F -> sml
 
 ```
 1+1;
