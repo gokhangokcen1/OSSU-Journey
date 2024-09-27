@@ -3,8 +3,15 @@
 empty
 
 (define L1 (cons "Flames" empty))                ; a list of 1 element
-(define L2 (cons 10 (cons 9 (cons 10 empty))))   ; a list of 3 elements
-(define L3 (cons (square 10 "solid" "blue")      ; a list of 3 elements
+(define L2 (list "Flames"))
+(define L3 (cons 10 (cons 9 (cons 10 empty))))   ; a list of 3 elements
+(define L4 (list 10 9 10))
+
+(=  (first L3) (first L4))
+(=  (first (rest L3)) (first (rest L4)))
+(= (first (rest (rest L3))) (first (rest (rest L4))))
+
+(define L5 (cons (square 10 "solid" "blue")      ; a list of 3 elements
            (cons (triangle 20 "solid" "green")        
                   empty)))                             
 
