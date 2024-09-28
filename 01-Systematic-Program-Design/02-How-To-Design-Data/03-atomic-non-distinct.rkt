@@ -19,6 +19,6 @@
 (define (fn-for-city-name cn)
   (... cn))
 
-;; Tempate rules used:
+;; Template rules used:
 ;;  - atomic non-distinct: String
 
