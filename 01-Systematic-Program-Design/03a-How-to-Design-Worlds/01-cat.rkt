@@ -34,7 +34,7 @@
 #;
 (define (render-cat c) MTS) ;stub
 
-;; <use temlate from Cat>
+;; <use template from Cat>
 
 (define (render-cat c)
   (place-image CAT-IMG c CTR-Y MTS))
