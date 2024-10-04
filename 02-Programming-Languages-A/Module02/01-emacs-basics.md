@@ -32,7 +32,7 @@ Some other useful commands:
 
 Getting help within Emacs: In addition to the help button/menu on the right...
 
-* C-h**: Hitting this will display a short message in the minibuffer: 
+* **C-h**: Hitting this will display a short message in the minibuffer: 
 `C-h (Type ? for further options)`
 
 * **C-h b**: Key bindings. This lists all key bindings that are valid for the current mode. Note that key bindings change from mode to mode.
